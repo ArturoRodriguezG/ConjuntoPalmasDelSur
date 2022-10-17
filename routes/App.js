@@ -36,7 +36,7 @@ import {getHash} from "../connections/helpers/getHash.js"
 //	header.innerHTML= Header()
 
 		let ruta= await resolverRutas(getHash())
-		const pagina= (Rutas[ruta]) ? Rutas[ruta] : Error404 
+		let pagina= (Rutas[ruta]) ? Rutas[ruta] : Error404 
  	    main.innerHTML=pagina()
     }
 export {App}
