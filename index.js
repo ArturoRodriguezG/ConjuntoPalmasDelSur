@@ -1,3 +1,5 @@
+console.log("Modo ejecución...!!!")
+
 import {App} from "./routes/App.js"
-windows.addEventListener("load", App)
-windows.addEventListener("hashchange", App)
+window.addEventListener("load",App)
+window.addEventListener("hashchange", App)

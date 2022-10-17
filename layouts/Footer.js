@@ -1,5 +1,4 @@
-Const Footer= ()=>{
-    // return ( se inyecta el código diferente al Nav o cargabndo una variable y retornando la variabel), buscar ejemplo de footer y personalizar
+const Footer= ()=>{
     return(
     `
     <footer class="text-center text-lg-start bg-light text-muted">
@@ -45,11 +44,11 @@ Const Footer= ()=>{
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Content -->
               <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>Company name
+                <i class="fas fa-gem me-3"></i>UNAB Grupo 15 2022-Grupo 1
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
+                Fuerte equipo de trabajo dedicado a desarrollo de aplicaciones Web y movil.
+                Experto BackEnd y FrontEnd, domiciliados en Bogotá D.C.- Colombia
               </p>
             </div>
             <!-- Grid column -->
@@ -58,19 +57,19 @@ Const Footer= ()=>{
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
-                Products
+                Metodologías de Desarrollo
               </h6>
               <p>
-                <a href="#!" class="text-reset">Angular</a>
+                <a href="#!" class="text-reset">Remoto</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">React</a>
+                <a href="#!" class="text-reset">FreeLance</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Vue</a>
+                <a href="#!" class="text-reset">Scrum</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Laravel</a>
+                <a href="#!" class="text-reset">En Site</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -79,19 +78,22 @@ Const Footer= ()=>{
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
-                Useful links
+                Nuestras Redes:
               </h6>
               <p>
-                <a href="#!" class="text-reset">Pricing</a>
+                <img src="../img/facebook.ico">
               </p>
               <p>
-                <a href="#!" class="text-reset">Settings</a>
+                <img src="../img/instagram.ico" alt="">
               </p>
               <p>
-                <a href="#!" class="text-reset">Orders</a>
+                <img src="../img/linkedin.ico" alt="">
               </p>
               <p>
-                <a href="#!" class="text-reset">Help</a>
+                <img src="../img/whatsapp.ico" alt="">
+              </p>
+              <p>
+                <img src="../img/youtube.ico" alt="">
               </p>
             </div>
             <!-- Grid column -->
@@ -99,14 +101,14 @@ Const Footer= ()=>{
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <h6 class="text-uppercase fw-bold mb-4">Línea de Contacto</h6>
+              <p><i class="fas fa-home me-3"></i> Colombia - Bogota D.C.</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
-                info@example.com
+                grupo1@unabgrupo15.com
               </p>
-              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+              <p><i class="fas fa-phone me-3"></i> 601 255 55 55</p>
+              <p><i class="fas fa-print me-3"></i> 367 587 56 01</p>
             </div>
             <!-- Grid column -->
           </div>
@@ -114,9 +116,10 @@ Const Footer= ()=>{
         </div>
       </section>
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="https://index.html/">AdministracionCPS.com</a>
   </div>
   </footer>
   `)
 }
+export {Footer}
