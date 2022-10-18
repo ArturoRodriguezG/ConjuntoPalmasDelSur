@@ -12,8 +12,8 @@ import {GenerarFactura} from "../pages/GenerarFactura.js"
 import {RegistrarPago} from "../pages/RegistrarPago.js"
 import {GenerarExtracto} from "../pages/GenerarExtracto.js"
 import {ReporteCartera} from "../pages/ReporteCartera.js"
-import {resolverRutas} from "../connections/helpers/resolverRutas.js"
-import {getHash} from "../connections/helpers/getHash.js"
+import resolverRutas from "../connections/helpers/resolverRutas.js"
+import getHash from "../connections/helpers/getHash.js"
 
   const Rutas= {
                 "/": Bienvenida, 
@@ -37,6 +37,6 @@ import {getHash} from "../connections/helpers/getHash.js"
 
 		let ruta= await resolverRutas(getHash())
 		let pagina= (Rutas[ruta]) ? Rutas[ruta] : Error404 
- 	    main.innerHTML=pagina()
+ 	    main.innerHTML= await pagina()
     }
 export {App}
