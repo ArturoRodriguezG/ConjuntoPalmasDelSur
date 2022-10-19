@@ -1,5 +1,3 @@
-
-//import {Header} from "../layouts/Header.js"
 import {Nav} from "../layouts/Nav.js"
 import {Footer} from "../layouts/Footer.js"
 import {Error404} from "../pages/Error404.js"
@@ -16,7 +14,7 @@ import resolverRutas from "../connections/helpers/resolverRutas.js"
 import getHash from "../connections/helpers/getHash.js"
 
   const Rutas= {
-                "/": Bienvenida, 
+                "/":Bienvenida, 
                 "/inicioSesion": InicioSesion,
 				"/consultaDatos": ConsultaDatos,
 				"/actualizarDatos": ActualizarDatos,
@@ -33,7 +31,6 @@ import getHash from "../connections/helpers/getHash.js"
 		const footer= document.querySelector("footer")
 		header.innerHTML= await Nav()
 		footer.innerHTML= await Footer()
-//	header.innerHTML= Header()
 
 		let ruta= await resolverRutas(getHash())
 		let pagina= (Rutas[ruta]) ? Rutas[ruta] : Error404 
