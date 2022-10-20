@@ -2,15 +2,9 @@ const Footer= ()=>{
     return(
     `
     <footer class="text-center text-lg-start bg-light text-muted">
-      <!-- Section: Social media -->
+      <!-- Section: Informacion empresarial -->
       <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
-        <!-- Left -->
-    
-        <!-- Right -->
+        
         <div>
           <a href="" class="me-4 text-reset">
             <i class="fab fa-facebook-f"></i>
@@ -60,16 +54,16 @@ const Footer= ()=>{
                 Metodologías de Desarrollo
               </h6>
               <p>
-                <a href="#!" class="text-reset">Remoto</a>
+                <a class="text-reset">Remoto</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">FreeLance</a>
+                <a class="text-reset">FreeLance</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Scrum</a>
+                <a class="text-reset">Scrum</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">En Site</a>
+                <a class="text-reset">En Site</a>
               </p>
             </div>
             <!-- Grid column -->

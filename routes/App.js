@@ -14,7 +14,7 @@ import resolverRutas from "../connections/helpers/resolverRutas.js"
 import getHash from "../connections/helpers/getHash.js"
 
   const Rutas= {
-                "/":Bienvenida, 
+                "/bienvenida":Bienvenida, 
                 "/inicioSesion": InicioSesion,
 				"/consultaDatos": ConsultaDatos,
 				"/actualizarDatos": ActualizarDatos,
