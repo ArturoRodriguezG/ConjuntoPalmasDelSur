@@ -31,7 +31,8 @@
         <h1>Conjunto Palmas el Sur</h1>
         <p>Conjunto Recidencial <span translate="no"> </span></p>
         
-        <br>
+        <br></br>
+        
         <ul>
             <li><a href="views/Administrador.html">Administrador</a></li>
             <li><a href="views/Arrendatario.html"> Arrendatario</a></li>
@@ -65,7 +66,6 @@
 
         </div>
              
-
 
     </body>
 
