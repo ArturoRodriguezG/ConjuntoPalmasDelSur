@@ -1,23 +1,13 @@
-const InicioSesion= ()=> 
-    ` 
-    <div>
-        <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Usuario: </span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        </div>
-    
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Contraseña</label>
-        </div>
-        <div>  </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault"> Ingresar como Administrador </label>
-        </div>
-        <div>
-        <button type="submit" class="btn btn-outline-primary">Autenticarme</button>
-        </div>
+
+import { IniciarSesionFormulario } from "../components/IniciarSesionFormulario.js"
+
+const InicioSesion= ()=>
+` 
+<h3 class= "text-left"> Iniciar Sesión</h3>
+<div class="container mt-3 mb-3">
+    <div class= "col col-sm-12 col-md-8 col-lg-8">
+        ${IniciarSesionFormulario()}
     </div>
-    `
+</div>
+ `
 export {InicioSesion}

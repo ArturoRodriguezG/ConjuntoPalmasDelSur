@@ -4,7 +4,8 @@ import {Error404} from "../pages/Error404.js"
 import {Bienvenida} from "../pages/Bienvenida.js"
 import {InicioSesion} from "../pages/InicioSesion.js"
 import {ConsultaDatos} from "../pages/ConsultaDatos.js"
-import {ActualizarDatos} from "../pages/ActualizarDatos.js" 
+import {ActualizarDatos} from "../pages/ActualizarDatos.js"
+import {ActualizarClave} from "../pages/ActualizarClave.js" 
 import {ActualizarTarifas} from "../pages/ActualizarTarifas.js"
 import {GenerarFactura} from "../pages/GenerarFactura.js"
 import {RegistrarPago} from "../pages/RegistrarPago.js"
@@ -18,6 +19,7 @@ import getHash from "../connections/helpers/getHash.js"
                 "/inicioSesion": InicioSesion,
 				"/consultaDatos": ConsultaDatos,
 				"/actualizarDatos": ActualizarDatos,
+				"/actualizarClave": ActualizarClave,
 				"/actualizarTarifas": ActualizarTarifas,
 				"/generarFactura": GenerarFactura,
 				"/registrarPago": RegistrarPago,
