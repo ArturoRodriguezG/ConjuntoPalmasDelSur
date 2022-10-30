@@ -13,16 +13,19 @@ import com.example.apirest_admincps.Models.AdministradorModel;
 import com.example.apirest_admincps.Repositories.AdministradorRepository;
 
 @RestController
+//este es el EndPoint
 @RequestMapping(path = "/administradores")
 public class AdministradorController {
     @Autowired
     AdministradorRepository administradorRepository;
 
+    //para consultar
     @GetMapping(path = "/all")
     public Iterable<AdministradorModel> getAllAdministradores(){
         return administradorRepository.findAll();
     }
 
+    //Para Crear
     @PostMapping(path = "/guardar")
     public AdministradorModel saveAdministrador(@RequestBody AdministradorModel administrador){
         return administradorRepository.save(administrador);
