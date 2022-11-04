@@ -11,13 +11,14 @@ public class ApiadministracioncpsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiadministracioncpsApplication.class, args);
-		System.out.println("Api Correteando..!!!");
-	}
+		System.out.println("Correteabdo API Java...!!!");
 
+	}
 	@Bean 
 	public ModelMapper modelMapper(){
 		ModelMapper modelMapper= new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		return modelMapper;
 	}
+
 }

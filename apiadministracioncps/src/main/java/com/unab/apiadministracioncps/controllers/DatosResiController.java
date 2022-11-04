@@ -1,4 +1,5 @@
 package com.unab.apiadministracioncps.controllers;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +23,7 @@ public class DatosResiController {
 
     @GetMapping
     public String ConsultaDatos(){
-        return "Envio ARG-dos";
+        return "Envio datos ARG-3";
     }
 
 
@@ -30,8 +31,6 @@ public class DatosResiController {
     public DatosResiModelsDTO CreaDatos(@RequestBody DatosResiModelo datosResiModelo){
         DatosResiModelsDTO datosResiModelsDTO= modelMapper.map(datosResiModelo, DatosResiModelsDTO.class);
         DatosResiModelsDTO datosResiDtoCrear= iDatosResiService.creaDatos(datosResiModelsDTO);
-        
         return datosResiDtoCrear;
     }
-
 }

@@ -7,8 +7,7 @@ public class DatosResiModelsDTO implements Serializable{
     
     private static final long serialVersionUID= 1L;
     private String codigo;
-    private String nombres;
-    private String apellidos;
+    private String nombre;
     private String correo;
     private String telefono1;
     private String telefono2;
@@ -22,20 +21,12 @@ public class DatosResiModelsDTO implements Serializable{
         this.codigo = codigo;
     }
 
-    public String getNombres() {
-        return this.nombres;
+    public String getNombre() {
+        return this.nombre;
     }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
-
-    public String getApellidos() {
-        return this.apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getCorreo() {
@@ -69,4 +60,5 @@ public class DatosResiModelsDTO implements Serializable{
     public void setClave(String clave) {
         this.clave = clave;
     }
+    
 }

@@ -8,17 +8,19 @@ import org.springframework.stereotype.Service;
 
 import com.unab.apiadministracioncps.models.DatosResiEntidad;
 import com.unab.apiadministracioncps.models.DatosResiModelsDTO;
-import com.unab.apiadministracioncps.repositories.IDatosResiRepositor;
+import com.unab.apiadministracioncps.repository.IDatosResiRepositor;
 
 @Service
 public class DatosResiService implements IDatosResiService{
 
     @Autowired
     ModelMapper modelMapper;
-    @Autowired IDatosResiRepositor iDatosResiRepositor;
+    
+    @Autowired 
+    IDatosResiRepositor iDatosResiRepositor;
 
     @Override
-    public List<DatosResiModelsDTO> obtenerDatos(){
+    public List <DatosResiModelsDTO> obtenerDatos(){
         return null;
     }
 
@@ -26,6 +28,7 @@ public class DatosResiService implements IDatosResiService{
     public DatosResiModelsDTO creaDatos(DatosResiModelsDTO datosResiModelsDTO){
 
         DatosResiEntidad datosResiEntidad= modelMapper.map(datosResiModelsDTO, DatosResiEntidad.class);
+        
         //aqui se realizan las operaciones o asignaciones boleanaspara envio
         DatosResiEntidad datosResiEntidadCreado= iDatosResiRepositor.save(datosResiEntidad);
 
