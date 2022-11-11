@@ -1,4 +1,5 @@
-const API= "localhost:8080/consultaDatos"
+
+const API= "localhost:8080/getConsultaDatos"
 
 export default async (id)=>{
 
