@@ -6,9 +6,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.unab.apiadministracioncps.models.DatosResiEntidad;
-import com.unab.apiadministracioncps.models.DatosResiModelsDTO;
-import com.unab.apiadministracioncps.repository.IDatosResiRepositor;
+import com.unab.apiadministracioncps.data.Dtos.DatosResiDto;
+import com.unab.apiadministracioncps.data.Entidades.DatosResiEntidad;
+import com.unab.apiadministracioncps.data.Repositorio.IDatosResiRepositor;
 
 @Service
 public class DatosResiService implements IDatosResiService{
@@ -20,19 +20,19 @@ public class DatosResiService implements IDatosResiService{
     IDatosResiRepositor iDatosResiRepositor;
 
     @Override
-    public List <DatosResiModelsDTO> obtenerDatos(){
+    public List <DatosResiDto> obtenerDatos(){
         return null;
     }
 
     @Override
-    public DatosResiModelsDTO creaDatos(DatosResiModelsDTO datosResiModelsDTO){
+    public DatosResiDto creaDatos(DatosResiDto datosResiModelsDTO){
 
         DatosResiEntidad datosResiEntidad= modelMapper.map(datosResiModelsDTO, DatosResiEntidad.class);
         
         //aqui se realizan las operaciones o asignaciones boleanaspara envio
         DatosResiEntidad datosResiEntidadCreado= iDatosResiRepositor.save(datosResiEntidad);
 
-        DatosResiModelsDTO datosResiModelsDTOCreado= modelMapper.map(datosResiEntidadCreado, DatosResiModelsDTO.class);
+        DatosResiDto datosResiModelsDTOCreado= modelMapper.map(datosResiEntidadCreado, DatosResiDto.class);
         return  datosResiModelsDTOCreado;
     }
 }

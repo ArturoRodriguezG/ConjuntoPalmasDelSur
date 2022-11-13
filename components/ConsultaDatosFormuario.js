@@ -1,5 +1,8 @@
-const ConsultaDatosFormulario= ()=> 
-` 
+//import getAConsultaDatos from "../connections/helpers/getAConsultaDatos.js"
+
+const ConsultaDatosFormulario= ()=>{ 
+    //const datos= await getAConsultaDatos()
+    return (` 
 <form>
     <fieldset disabled>
         <div class="mb-3">
@@ -22,5 +25,6 @@ const ConsultaDatosFormulario= ()=>
     <input type="submit" class="btn-check" id="btn-check" autocomplete="off">
     <label class="btn btn-primary" for="btn-check"> Salir </label>
 </form>
-`
+`)
+}
 export {ConsultaDatosFormulario}

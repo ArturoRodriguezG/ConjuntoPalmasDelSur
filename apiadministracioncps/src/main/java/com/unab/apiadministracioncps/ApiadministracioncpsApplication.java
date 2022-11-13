@@ -11,7 +11,7 @@ public class ApiadministracioncpsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiadministracioncpsApplication.class, args);
-		System.out.println("Correteabdo API Java...!!!");
+		System.out.println("Correteando API Java...!!!");
 
 	}
 	@Bean 

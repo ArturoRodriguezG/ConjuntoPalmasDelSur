@@ -1,29 +1,28 @@
-package com.unab.apiadministracioncps.models;
-
+package com.unab.apiadministracioncps.data.Entidades;
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+//Entidad Tabla Residente del Conjunto
 @Entity (name="residente")
 public class DatosResiEntidad implements Serializable{
 
-        private static final long serialVersionUID= 1L;
+    private static final long serialVersionUID= 1L;
 
-        @Id
-        @Column(nullable= false)
-        private String codigo;
-        @Column(nullable= false)
-        private String nombre;
-        @Column(nullable= false)
-        private String correo;
-        @Column(nullable= false)
-        private String telefono1;
-        @Column(nullable= false)
-        private String telefono2;
-        @Column(nullable= false)
-        private String clave;
+    @Id
+    @Column(nullable= false)
+    private String codigo;
+    @Column(nullable= false)
+    private String nombre;
+    @Column(nullable= false)
+    private String correo;
+    @Column(nullable= false)
+    private String telefono1;
+    @Column(nullable= false)
+    private String telefono2;
+    @Column(nullable= false)
+    private String clave;
 
     public String getCodigo() {
         return this.codigo;

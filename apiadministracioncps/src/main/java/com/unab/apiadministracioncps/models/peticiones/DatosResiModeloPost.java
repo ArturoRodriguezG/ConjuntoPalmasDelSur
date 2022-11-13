@@ -1,11 +1,7 @@
-package com.unab.apiadministracioncps.models;
+package com.unab.apiadministracioncps.models.peticiones;
 
-import java.io.Serializable;
-
-//esteobjeto de transferencia de datos entre la BD-logica-cliente ida-vuelta
-public class DatosResiModelsDTO implements Serializable{
-    
-    private static final long serialVersionUID= 1L;
+//modelo POjO que recibe datos del clientes 
+public class DatosResiModeloPost {
     private String codigo;
     private String nombre;
     private String correo;
@@ -13,6 +9,7 @@ public class DatosResiModelsDTO implements Serializable{
     private String telefono2;
     private String clave;
 
+    
     public String getCodigo() {
         return this.codigo;
     }
