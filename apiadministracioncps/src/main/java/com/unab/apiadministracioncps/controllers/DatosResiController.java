@@ -21,16 +21,18 @@ public class DatosResiController {
     IDatosResiService iDatosResiService;   
     
     @GetMapping
-    public String ConsultaDatos(){
-        return "Envio datos ARG-3";
+    public DatosResiModeloGet ConsultaDatos(){
+        String codigoLog= "1234567890";
+        DatosResiDto datosResiDto= iDatosResiService.obtenerDatos(codigoLog);
+        DatosResiModeloGet datosResiModeloGet= modelMapper.map(datosResiDto, DatosResiModeloGet.class);
+        return datosResiModeloGet;
     }
-
 
     @PostMapping
     public DatosResiModeloGet CreaDatos(@RequestBody DatosResiModeloPost datosResiModelo){
         DatosResiDto datosResiModelsDTO= modelMapper.map(datosResiModelo, DatosResiDto.class);
         DatosResiDto datosResiDtoCrear= iDatosResiService.creaDatos(datosResiModelsDTO);
-        DatosResiModeloGet datosResiModeloGet= modelMapper.map(datosResiDtoCrear, DatosResiModeloGet.class)
+        DatosResiModeloGet datosResiModeloGet= modelMapper.map(datosResiDtoCrear, DatosResiModeloGet.class);
         return datosResiModeloGet;
     }
 }

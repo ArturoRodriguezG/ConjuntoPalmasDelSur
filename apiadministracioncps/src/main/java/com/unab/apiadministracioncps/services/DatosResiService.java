@@ -1,11 +1,10 @@
 package com.unab.apiadministracioncps.services;
 
+import java.nio.charset.CodingErrorAction;
 import java.util.List;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.unab.apiadministracioncps.data.Dtos.DatosResiDto;
 import com.unab.apiadministracioncps.data.Entidades.DatosResiEntidad;
 import com.unab.apiadministracioncps.data.Repositorio.IDatosResiRepositor;
@@ -20,8 +19,15 @@ public class DatosResiService implements IDatosResiService{
     IDatosResiRepositor iDatosResiRepositor;
 
     @Override
-    public List <DatosResiDto> obtenerDatos(){
-        return null;
+    public DatosResiDto obtenerDatos(String codigo){
+        DatosResiEntidad datosResiEntidad= iDatosResiRepositor.findByCodigo(codigo);
+        if (datosResiEntidad==null){
+            throw new RuntimeException("Error Datos No existen");
+        } 
+        DatosResiDto datosResiDto= modelMapper.map(datosResiEntidad, DatosResiDto.class);
+    
+        return datosResiDto;
+    
     }
 
     @Override
@@ -35,4 +41,6 @@ public class DatosResiService implements IDatosResiService{
         DatosResiDto datosResiModelsDTOCreado= modelMapper.map(datosResiEntidadCreado, DatosResiDto.class);
         return  datosResiModelsDTOCreado;
     }
+
+
 }

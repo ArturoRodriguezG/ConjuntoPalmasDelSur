@@ -3,9 +3,14 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.Table;
 
 //Entidad Tabla Residente del Conjunto
 @Entity (name="residente")
+@Table(indexes = {
+    @Index(columnList = "codigo", name= "codigo", unique= true)
+})
 public class DatosResiEntidad implements Serializable{
 
     private static final long serialVersionUID= 1L;

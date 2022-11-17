@@ -7,5 +7,5 @@ import com.unab.apiadministracioncps.data.Entidades.DatosParamEntidad;
 
 @Repository
 public interface IDatosParamRepositor extends CrudRepository <DatosParamEntidad, Integer>  {
-    
+        
 }

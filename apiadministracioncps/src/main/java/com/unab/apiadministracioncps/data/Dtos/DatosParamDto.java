@@ -6,8 +6,9 @@ public class DatosParamDto  implements Serializable{
 
     private static final long serialVersionUID= 1L;
     private Integer id;
-    private Integer tarifaAdmin;
-    private Integer tarifaServicios;
+    private Integer tarifa_Admin;
+    private Integer tarifa_Servicios;
+
 
     public Integer getId() {
         return this.id;
@@ -17,20 +18,21 @@ public class DatosParamDto  implements Serializable{
         this.id = id;
     }
 
-    public Integer getTarifaAdmin() {
-        return this.tarifaAdmin;
+    public Integer getTarifa_Admin() {
+        return this.tarifa_Admin;
     }
 
-    public void setTarifaAdmin(Integer tarifaAdmin) {
-        this.tarifaAdmin = tarifaAdmin;
+    public void setTarifa_Admin(Integer tarifa_Admin) {
+        this.tarifa_Admin = tarifa_Admin;
     }
 
-    public Integer getTarifaServicios() {
-        return this.tarifaServicios;
+    public Integer getTarifa_Servicios() {
+        return this.tarifa_Servicios;
     }
 
-    public void setTarifaServicios(Integer tarifaServicios) {
-        this.tarifaServicios = tarifaServicios;
+    public void setTarifa_Servicios(Integer tarifa_Servicios) {
+        this.tarifa_Servicios = tarifa_Servicios;
     }
+
 
 }

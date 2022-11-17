@@ -4,10 +4,17 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.Table;
 
 //Entidad Tabla Inmueble de los  Aptos del Conjunto
 //Llenado directo, tabla sin mantenimiento
 @Entity (name="inmueble")
+@Table(indexes = {
+    @Index(columnList = "codigo", name= "codigo", unique= true),
+    @Index(columnList = "id_residente", name= "id_residente", unique= false)
+})
+
 public class DatosInmuEntidad implements Serializable{
 
     private static final long serialVersionUID= 1L;
@@ -18,7 +25,7 @@ public class DatosInmuEntidad implements Serializable{
     @Column(nullable= false)
     private String descripcion;
     @Column(nullable= false)
-    private String idResidente;
+    private String id_residente;
     @Column(nullable= false)
     private boolean esTarifaAdmin;
     @Column(nullable= false)
@@ -44,14 +51,6 @@ public class DatosInmuEntidad implements Serializable{
         this.descripcion = descripcion;
     }
 
-    public String getIdResidente() {
-        return this.idResidente;
-    }
-
-    public void setIdResidente(String idResidente) {
-        this.idResidente = idResidente;
-    }
-
     public boolean isEsTarifaAdmin() {
         return this.esTarifaAdmin;
     }
@@ -62,6 +61,14 @@ public class DatosInmuEntidad implements Serializable{
 
     public void setEsTarifaAdmin(boolean esTarifaAdmin) {
         this.esTarifaAdmin = esTarifaAdmin;
+    }
+
+    public String getId_residente() {
+        return this.id_residente;
+    }
+
+    public void setId_residente(String id_residente) {
+        this.id_residente = id_residente;
     }
 
     public Date getFechaPago() {

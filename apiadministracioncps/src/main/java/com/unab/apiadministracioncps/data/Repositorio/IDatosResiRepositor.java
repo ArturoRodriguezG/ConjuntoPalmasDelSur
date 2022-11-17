@@ -5,6 +5,6 @@ import com.unab.apiadministracioncps.data.Entidades.DatosResiEntidad;
 
 @Repository
 public interface IDatosResiRepositor extends CrudRepository <DatosResiEntidad, String> {
-    
 
+    DatosResiEntidad findByCodigo(String codigo);
 }
