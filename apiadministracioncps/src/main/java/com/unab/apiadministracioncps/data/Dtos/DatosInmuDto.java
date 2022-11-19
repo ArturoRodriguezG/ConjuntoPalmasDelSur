@@ -8,12 +8,12 @@ public class DatosInmuDto implements Serializable{
 
     private String codigo;
     private String descripcion;
-    private String idResidente;
+    private String id_Residente;
     private boolean esTarifaAdmin;
     private Date fechaPago;
     private Integer valorPago;
     private Date fechaFactura;
-
+    private Integer valorsaldo;
 
     public String getCodigo() {
         return this.codigo;
@@ -31,12 +31,13 @@ public class DatosInmuDto implements Serializable{
         this.descripcion = descripcion;
     }
 
-    public String getIdResidente() {
-        return this.idResidente;
+
+    public String getId_Residente() {
+        return this.id_Residente;
     }
 
-    public void setIdResidente(String idResidente) {
-        this.idResidente = idResidente;
+    public void setId_Residente(String id_Residente) {
+        this.id_Residente = id_Residente;
     }
 
     public boolean isEsTarifaAdmin() {
@@ -74,5 +75,14 @@ public class DatosInmuDto implements Serializable{
     public void setFechaFactura(Date fechaFactura) {
         this.fechaFactura = fechaFactura;
     }
+
+    public Integer getValorsaldo() {
+        return this.valorsaldo;
+    }
+
+    public void setValorsaldo(Integer valorsaldo) {
+        this.valorsaldo = valorsaldo;
+    }
+    
 
 }

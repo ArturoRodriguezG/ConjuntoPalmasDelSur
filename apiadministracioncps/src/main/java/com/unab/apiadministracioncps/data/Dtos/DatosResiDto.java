@@ -1,5 +1,6 @@
 package com.unab.apiadministracioncps.data.Dtos;
 import java.io.Serializable;
+import java.util.List;
 
 //Este objeto se de transferencia de datos entre la BD-logica-cliente ida-vuelta
 public class DatosResiDto implements Serializable{
@@ -11,6 +12,7 @@ public class DatosResiDto implements Serializable{
     private String telefono1;
     private String telefono2;
     private String clave;
+    private List<DatosInmuDto> datosInmuDtoList;
 
     public String getCodigo() {
         return this.codigo;
@@ -60,4 +62,13 @@ public class DatosResiDto implements Serializable{
         this.clave = clave;
     }
     
+
+    public List<DatosInmuDto> getDatosInmuDtoList() {
+        return this.datosInmuDtoList;
+    }
+
+    public void setDatosInmuDtoList(List<DatosInmuDto> datosInmuDtoList) {
+        this.datosInmuDtoList = datosInmuDtoList;
+    }
+
 }

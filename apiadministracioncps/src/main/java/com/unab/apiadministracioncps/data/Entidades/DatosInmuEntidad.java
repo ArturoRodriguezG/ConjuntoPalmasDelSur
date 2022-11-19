@@ -5,15 +5,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Index;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 //Entidad Tabla Inmueble de los  Aptos del Conjunto
 //Llenado directo, tabla sin mantenimiento
 @Entity (name="inmueble")
 @Table(indexes = {
-    @Index(columnList = "codigo", name= "codigo", unique= true),
-    @Index(columnList = "id_residente", name= "id_residente", unique= false)
+    @Index(columnList = "codigo", name= "codigo", unique= true)
 })
+// @Index(columnList = "id_residente", name= "id_residente", unique= false)
 
 public class DatosInmuEntidad implements Serializable{
 
@@ -34,6 +36,12 @@ public class DatosInmuEntidad implements Serializable{
     private Integer valorPago;
     @Column(nullable= false)
     private Date fechaFactura;
+    @Column(nullable= false)
+    private Integer valorsaldo;
+
+    @ManyToOne
+    @JoinColumn(name = "id_residente", updatable = false, insertable = false)
+    private DatosResiEntidad datosResiEntidad;
 
     public String getCodigo() {
         return this.codigo;
@@ -94,6 +102,24 @@ public class DatosInmuEntidad implements Serializable{
     public void setFechaFactura(Date fechaFactura) {
         this.fechaFactura = fechaFactura;
     }
-        
 
-}
+    public Integer getValorsaldo() {
+        return this.valorsaldo;
+    }
+
+    public void setValorsaldo(Integer valorsaldo) {
+        this.valorsaldo = valorsaldo;
+    }
+
+
+    public DatosResiEntidad getDatosResiEntidad() {
+        return this.datosResiEntidad;
+    }
+
+    public void setDatosResiEntidad(DatosResiEntidad datosResiEntidad) {
+        this.datosResiEntidad = datosResiEntidad;
+    }
+
+}        
+
+  

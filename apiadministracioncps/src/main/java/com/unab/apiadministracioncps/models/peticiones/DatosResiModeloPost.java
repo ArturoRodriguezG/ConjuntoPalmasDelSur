@@ -8,6 +8,7 @@ public class DatosResiModeloPost {
     private String telefono1;
     private String telefono2;
     private String clave;
+//    private List<DatosInmuDto   > datosInmuDtoList;
 
     
     public String getCodigo() {

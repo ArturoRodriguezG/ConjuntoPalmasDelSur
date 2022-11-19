@@ -25,9 +25,7 @@ public class DatosResiService implements IDatosResiService{
             throw new RuntimeException("Error Datos No existen");
         } 
         DatosResiDto datosResiDto= modelMapper.map(datosResiEntidad, DatosResiDto.class);
-    
         return datosResiDto;
-    
     }
 
     @Override

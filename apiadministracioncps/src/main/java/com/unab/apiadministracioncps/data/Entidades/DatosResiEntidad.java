@@ -1,9 +1,14 @@
 package com.unab.apiadministracioncps.data.Entidades;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Index;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 //Entidad Tabla Residente del Conjunto
@@ -28,6 +33,9 @@ public class DatosResiEntidad implements Serializable{
     private String telefono2;
     @Column(nullable= false)
     private String clave;
+
+    @OneToMany(cascade= CascadeType.ALL, mappedBy = "datosResiEntidad")
+    private List<DatosInmuEntidad> datosInmuEntidadList= new ArrayList<>();
 
     public String getCodigo() {
         return this.codigo;
@@ -76,5 +84,15 @@ public class DatosResiEntidad implements Serializable{
     public void setClave(String clave) {
         this.clave = clave;
     }
+
+
+    public List<DatosInmuEntidad> getDatosInmuEntidadList() {
+        return this.datosInmuEntidadList;
+    }
+
+    public void setDatosInmuEntidadList(List<DatosInmuEntidad> datosInmuEntidadList) {
+        this.datosInmuEntidadList = datosInmuEntidadList;
+    }
+
         
 }

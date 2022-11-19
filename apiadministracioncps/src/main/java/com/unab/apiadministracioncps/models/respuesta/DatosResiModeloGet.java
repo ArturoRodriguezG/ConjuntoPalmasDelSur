@@ -8,7 +8,6 @@ public class DatosResiModeloGet {
     private String telefono1;
     private String telefono2;
     private String clave;
-
     
     public String getCodigo() {
         return this.codigo;
