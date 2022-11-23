@@ -1,3 +1,8 @@
+//MATAR PROCESO 8080.
+// CMD netstat -noa
+//taskkill /F /PID 12896
+
+
 const Error404= ()=> 
 ` 
 <div class=”fs-a fw-bold text-danger”>

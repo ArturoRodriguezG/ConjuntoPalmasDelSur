@@ -11,5 +11,4 @@ const ConsultaDatos= ()=>
         </div>
     </div> 
 `
-
 export {ConsultaDatos}
