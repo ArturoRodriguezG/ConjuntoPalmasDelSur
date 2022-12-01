@@ -1,5 +1,8 @@
 Insert Ignore Into Parametros(id, tarifa_admin, tarifa_servicios) values (1, 95000, 125000);
 
+Insert Ignore Into Administrador (codigo,nombre) values ("ADM001","Administrador 1");
+Insert Ignore Into Administrador (codigo,nombre) values ("ADM002","Administrador 2");
+
 Insert Ignore Into inmueble(codigo, descripcion, es_tarifa_admin, id_residente, fecha_factura, fecha_pago) values
 ("Apto-11101", "Torre 1 Interior 1 Apto 101", 0, "Apto-11101", "2022-10-01", "2022-10-01"),
 ("Apto-11102", "Torre 1 Interior 1 Apto 102", 1, "Apto-11102", "2022-10-01", "2022-10-01"),
