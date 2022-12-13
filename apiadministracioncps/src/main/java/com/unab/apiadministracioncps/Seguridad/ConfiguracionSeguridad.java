@@ -22,6 +22,7 @@ public class ConfiguracionSeguridad extends WebSecurityConfigurerAdapter {
         .csrf().disable()
         .authorizeRequests()
         .antMatchers(HttpMethod.GET,"/datosResidente").permitAll()
+        .antMatchers(HttpMethod.PUT,"/datosResidente").permitAll()
         .anyRequest().authenticated();
     }
 

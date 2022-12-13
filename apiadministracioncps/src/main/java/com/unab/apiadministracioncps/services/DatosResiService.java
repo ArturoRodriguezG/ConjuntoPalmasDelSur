@@ -26,6 +26,19 @@ public class DatosResiService implements IDatosResiService{
         return datosResiDto;
     }
 
+
+    @Override
+    public DatosResiDto actualizaDatos(String codigo, DatosResiDto datosResiModelsDTO){
+
+        DatosResiEntidad datosResiEntidad= modelMapper.map(datosResiModelsDTO, DatosResiEntidad.class);
+        
+        //aqui se realizan las operaciones o asignaciones boleanaspara envio
+        DatosResiEntidad datosResiEntidadCreado= iDatosResiRepositor.save(datosResiEntidad);
+
+        DatosResiDto datosResiModelsDTOCreado= modelMapper.map(datosResiEntidadCreado, DatosResiDto.class);
+        return  datosResiModelsDTOCreado;
+    }
+
     @Override
     public DatosResiDto creaDatos(DatosResiDto datosResiModelsDTO){
 
@@ -37,6 +50,5 @@ public class DatosResiService implements IDatosResiService{
         DatosResiDto datosResiModelsDTOCreado= modelMapper.map(datosResiEntidadCreado, DatosResiDto.class);
         return  datosResiModelsDTOCreado;
     }
-
 
 }

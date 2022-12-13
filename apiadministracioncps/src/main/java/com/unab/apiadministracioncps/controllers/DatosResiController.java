@@ -2,6 +2,8 @@ package com.unab.apiadministracioncps.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,11 +33,20 @@ public class DatosResiController {
         return datosResiModeloGet;
     }
 
-    @PutMapping
-    public DatosResiModeloGet CreaDatos(@RequestBody DatosResiModeloPost datosResiModelo){
+    @PutMapping(path= "/codigo")
+    public DatosResiModeloPost actualizaDatos(@PathVariable String codigo, @RequestBody DatosResiModeloPost datosResiModelo){
+        DatosResiDto datosResiModelsDTO= modelMapper.map(datosResiModelo, DatosResiDto.class);
+        DatosResiDto datosResiDtoActualiza= iDatosResiService.actualizaDatos(codigo, datosResiModelsDTO);
+        DatosResiModeloPost datosResiModeloPost= modelMapper.map(datosResiDtoActualiza, DatosResiModeloPost.class);
+        return datosResiModeloPost;
+    }
+
+    @PostMapping
+    public DatosResiModeloPost CreaDatos(@RequestBody DatosResiModeloPost datosResiModelo){
         DatosResiDto datosResiModelsDTO= modelMapper.map(datosResiModelo, DatosResiDto.class);
         DatosResiDto datosResiDtoCrear= iDatosResiService.creaDatos(datosResiModelsDTO);
-        DatosResiModeloGet datosResiModeloGet= modelMapper.map(datosResiDtoCrear, DatosResiModeloGet.class);
-        return datosResiModeloGet;
+        DatosResiModeloPost datosResiModeloPost= modelMapper.map(datosResiDtoCrear, DatosResiModeloPost.class);
+        return datosResiModeloPost;
     }
+
 }

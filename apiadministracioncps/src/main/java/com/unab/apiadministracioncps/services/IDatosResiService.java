@@ -5,5 +5,6 @@ public interface IDatosResiService {
 
     DatosResiDto obtenerDatos(String codigo);
     DatosResiDto creaDatos(DatosResiDto datosResiModelsDTO);
+    DatosResiDto actualizaDatos(String codigo, DatosResiDto datosResiModelsDTO);
     
 }

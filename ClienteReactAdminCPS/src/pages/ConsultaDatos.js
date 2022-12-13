@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import {Row, Container, Button} from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
-import {CONSUL_POST_ENDPOINT} from "../connections/endpoints"
+import {CONSUL_GET_ENDPOINT} from "../connections/endpoints"
 
 const ConsultaDatos= ()=>{
     const navegar= useNavigate()
@@ -15,14 +15,15 @@ const ConsultaDatos= ()=>{
 
     useEffect(()=>{
 
+        axios.get(CONSUL_GET_ENDPOINT)
+        .then(respuesta=>{
+            setDresidente(respuesta.data)
+        })
+        .catch(err=>{
+            console.error(err)
+        })
+    
     },[])
-    axios.get(CONSUL_POST_ENDPOINT)
-    .then(respuesta=>{
-        setDresidente(respuesta.data)
-    })
-    .catch(err=>{
-        console.error(err)
-    })
 
     return(
     <Container className= "mt-3 mb-3">
